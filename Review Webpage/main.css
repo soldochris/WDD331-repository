@@ -36,18 +36,18 @@ header a:hover{
 }
 
 nav li {
-  margin: .5em 0;
+  margin: 1em 0;
 }
 
 main{
-  padding: 5%;
+  padding: 5% 10%;
   background-color: #FAEBD7;
 }
 
 article {
   background-color: #fff;
   box-shadow: 3px 3px 3px #bbb;
-  padding: 7% 5%;
+  padding: 7% 10%;
   margin-bottom: 2em;
   text-align: left;
 }
@@ -63,11 +63,15 @@ article {
 
 .post-content figure{
   width: 60%;
-  margin: 1em auto;
+  margin: 1.5em auto;
 }
 
 .post-content img{
   width: 100%;
+}
+
+.post-content p{
+  margin: 1em;
 }
 
 main a, main a:visited {
@@ -84,4 +88,21 @@ main a:hover {
 
 .post-content h2 a {
   color: #000;
+}
+
+@media screen and (min-width:768px){
+  body > div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  header{
+    padding: 7% 2.1em;
+  }
+  main{
+    grid-column: 2/-1;
+  }
+
+  .post-content figure {
+    width: 50%;
+  }
 }
