@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* VARIABLES */
+$blue-color:#6495ED;
+$antique-white-color:#FAEBD7;
+$burlywood-color:#DEB887;
+$white-color:#fff;
+$black-color:#000;
+$light-gray-color: #bbb;
+$dark-gray-color: #999;
+$headings-font: Lora, serif;
+;
+$body-font: Helvetica, Arial, sans-serif;
+
+/* MIXINS */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+/* STYLES */
+//reset
+*{
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $body-font;
+
+  h1, h2, h3, h4 {
+    font-family: $headings-font;
+  }
+
+  header {
+    background-color: $blue-color;
+    text-align: right;
+    padding: 7% 5%;
+
+    a, header hr {
+      color: $antique-white-color;
+    }
+
+    a:active {
+      color: $burlywood-color;
+    }
+
+    a:hover {
+      color: $white-color;
+      text-decoration: underline;
+    }
+
+    nav li {
+      margin: 1em 0;
+    }
+  }
+
+  main {
+    padding: 5% 10%;
+    background-color: $antique-white-color;
+
+    article {
+      background-color: $white-color;
+      box-shadow: 3px 3px 3px $light-gray-color;
+      padding: 7% 10%;
+      margin-bottom: 2em;
+      text-align: left;
+
+      .post-date {
+        color: $dark-gray-color;
+        margin: .5em 0;
+        font-weight: bold;
+      }
+
+      .post-content {
+        h2{ 
+          margin: .5em 0; 
+          a {
+            color: $black-color;
+          }
+        }
+
+        figure {
+          width: 60%;
+          margin: 1.5em auto;
+          img { width: 100%; }
+        }
+        p { margin: 1em; }
+      }
+    }
+
+    a, a:visited {
+      color: $blue-color;
+    }
+
+    a:active {
+      color: $burlywood-color;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//large view styles
+@media screen and (min-width:768px){
+  body > div{
+    @include prefix(display, grid, ms);
+    grid-template-columns: repeat(5, 1fr);
+
+    header {
+      padding: 7% 2.1em;
+    }
+    
+    main {
+      grid-column: 2/-1;
+
+      .post-content figure {
+        width: 50%;
+      }
+    }
+  }
+  
+}
