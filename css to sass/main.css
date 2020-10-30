@@ -7,71 +7,90 @@
   text-decoration: none;
   outline: none;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
+
 body h1, body h2, body h3, body h4 {
   font-family: Lora, serif;
 }
+
 body header {
   background-color: #6495ED;
   text-align: right;
   padding: 7% 5%;
 }
+
 body header a, body header header hr {
   color: #FAEBD7;
 }
+
 body header a:active {
   color: #DEB887;
 }
+
 body header a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
 body header nav li {
   margin: 1em 0;
 }
+
 body main {
   padding: 5% 10%;
   background-color: #FAEBD7;
 }
+
 body main article {
   background-color: #fff;
-  box-shadow: 3px 3px 3px #bbb;
+  -webkit-box-shadow: 3px 3px 3px #bbb;
+          box-shadow: 3px 3px 3px #bbb;
   padding: 7% 10%;
   margin-bottom: 2em;
   text-align: left;
 }
+
 body main article .post-date {
   color: #999;
-  margin: 0.5em 0;
+  margin: .5em 0;
   font-weight: bold;
 }
+
 body main article .post-content h2 {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
+
 body main article .post-content h2 a {
   color: #000;
 }
+
 body main article .post-content figure {
   width: 60%;
   margin: 1.5em auto;
 }
+
 body main article .post-content figure img {
   width: 100%;
 }
+
 body main article .post-content p {
   margin: 1em;
 }
+
 body main a, body main a:visited {
   color: #6495ED;
 }
+
 body main a:active {
   color: #DEB887;
 }
+
 body main a:hover {
   text-decoration: underline;
 }
@@ -80,7 +99,8 @@ body main a:hover {
   body > div {
     -ms-display: grid;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
   }
   body > div header {
     padding: 7% 2.1em;
@@ -92,5 +112,4 @@ body main a:hover {
     width: 50%;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
